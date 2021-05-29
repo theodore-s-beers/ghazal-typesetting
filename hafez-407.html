@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" xml:lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>A poem from Ganjoor</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      margin: auto;
+      max-width: 86ch;
+      padding: 2ch 1ch;
+    }
+
+    p {
+      font-family: "Scheherazade", serif;
+      font-size: 150%;
+      margin: 0;
+      text-align-last: justify;
+    }
+
+    .b {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .final-line {
+      align-items: center;
+      display: flex;
+      flex-flow: column nowrap;
+      margin-top: 0.4rem;
+    }
+
+    .line-number {
+      width: 6%;
+    }
+
+    .m1,
+    .m2 {
+      width: 44.5%;
+    }
+
+    .separator {
+      width: 5%;
+    }
+
+    #title-block-header {
+      display: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      p {
+        font-size: 140%;
+        text-align-last: auto;
+      }
+
+      .b {
+        display: block;
+      }
+
+      .final-line {
+        display: block;
+        margin-top: 0;
+      }
+
+      .line-number {
+        display: none;
+      }
+
+      .m1 {
+        width: auto;
+      }
+
+      .m2 {
+        background-color: #e8e8e8;
+        border-radius: 4px;
+        padding-right: 1em;
+        width: auto;
+      }
+
+      .separator {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">A poem from Ganjoor</h1>
+</header>
+<div class="b">
+<div class="m1">
+<p>مزرع سبز فلک دیدم و داس مه نو</p>
+</div>
+<div class="m2">
+<p>یادم از کشته خویش آمد و هنگام درو</p>
+</div>
+</div>
+<div class="b">
+<div class="m1">
+<p>گفتم ای بخت بخفتیدی و خورشید دمید</p>
+</div>
+<div class="m2">
+<p>گفت با این همه از سابقه نومید مشو</p>
+</div>
+</div>
+<div class="b">
+<div class="m1">
+<p>گر روی پاک و مجرد چو مسیحا به فلک</p>
+</div>
+<div class="m2">
+<p>از چراغ تو به خورشید رسد صد پرتو</p>
+</div>
+</div>
+<div class="b">
+<div class="m1">
+<p>تکیه بر اختر شب دزد مکن کاین عیار</p>
+</div>
+<div class="m2">
+<p>تاج کاووس ببرد و کمر کیخسرو</p>
+</div>
+</div>
+<div class="b">
+<div class="m1">
+<p>گوشوار زر و لعل ار چه گران دارد گوش</p>
+</div>
+<div class="m2">
+<p>دور خوبی گذران است نصیحت بشنو</p>
+</div>
+</div>
+<div class="b">
+<div class="m1">
+<p>چشم بد دور ز خال تو که در عرصه حسن</p>
+</div>
+<div class="m2">
+<p>بیدقی راند که برد از مه و خورشید گرو</p>
+</div>
+</div>
+<div class="b">
+<div class="m1">
+<p>آسمان گو مفروش این عظمت کاندر عشق</p>
+</div>
+<div class="m2">
+<p>خرمن مه به جوی خوشه پروین به دو جو</p>
+</div>
+</div>
+<div class="b">
+<div class="m1">
+<p>آتش زهد و ریا خرمن دین خواهد سوخت</p>
+</div>
+<div class="m2">
+<p>حافظ این خرقه پشمینه بینداز و برو</p>
+</div>
+</div>
+<script>
+  // Select all first hemistichs
+  const firstHems = document.querySelectorAll("div.m1");
+
+  for (let i = 0; i < firstHems.length; i++) {
+    // Add a dive for line number before each first hemistich
+    firstHems[i].insertAdjacentHTML(
+      "beforebegin",
+      '<div class="line-number"></div>'
+    );
+
+    // Add a div for separator after each first hemistich
+    firstHems[i].insertAdjacentHTML(
+      "afterend",
+      '<div class="separator"></div>'
+    );
+  }
+
+  // Select all whole lines
+  const lines = document.querySelectorAll("div.b");
+
+  // Select final line
+  const finalLine = lines[lines.length - 1];
+
+  // Apply special class to final line
+  finalLine.classList.remove("b");
+  finalLine.classList.add("final-line");
+
+  // Select all line number divs
+  const lineNumbers = document.querySelectorAll("div.line-number");
+
+  // Final line should never be numbered, so we stop iteration early
+  for (let i = 0; i < lineNumbers.length - 1; i++) {
+    // The actual line number, 1-indexed
+    const count = i + 1;
+
+    // If divisible by three, insert number
+    if (count % 3 === 0) {
+      // Number is also localized for Persian
+      lineNumbers[i].innerHTML = `<p>${count.toLocaleString("fa-IR")}</p>`;
+    }
+  }
+</script>
+</body>
+</html>

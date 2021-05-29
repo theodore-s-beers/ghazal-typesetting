@@ -1,0 +1,84 @@
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  body {
+    margin: auto;
+    max-width: 86ch;
+    padding: 2ch 1ch;
+  }
+
+  p {
+    font-family: "Scheherazade", serif;
+    font-size: 150%;
+    margin: 0;
+    text-align-last: justify;
+  }
+
+  .b {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .final-line {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 0.4rem;
+  }
+
+  .line-number {
+    width: 6%;
+  }
+
+  .m1,
+  .m2 {
+    width: 44.5%;
+  }
+
+  .separator {
+    width: 5%;
+  }
+
+  #title-block-header {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    p {
+      font-size: 140%;
+      text-align-last: auto;
+    }
+
+    .b {
+      display: block;
+    }
+
+    .final-line {
+      display: block;
+      margin-top: 0;
+    }
+
+    .line-number {
+      display: none;
+    }
+
+    .m1 {
+      width: auto;
+    }
+
+    .m2 {
+      background-color: #e8e8e8;
+      border-radius: 4px;
+      padding-right: 1em;
+      width: auto;
+    }
+
+    .separator {
+      display: none;
+    }
+  }
+</style>

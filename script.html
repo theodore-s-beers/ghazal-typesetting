@@ -1,0 +1,43 @@
+<script>
+  // Select all first hemistichs
+  const firstHems = document.querySelectorAll("div.m1");
+
+  for (let i = 0; i < firstHems.length; i++) {
+    // Add a dive for line number before each first hemistich
+    firstHems[i].insertAdjacentHTML(
+      "beforebegin",
+      '<div class="line-number"></div>'
+    );
+
+    // Add a div for separator after each first hemistich
+    firstHems[i].insertAdjacentHTML(
+      "afterend",
+      '<div class="separator"></div>'
+    );
+  }
+
+  // Select all whole lines
+  const lines = document.querySelectorAll("div.b");
+
+  // Select final line
+  const finalLine = lines[lines.length - 1];
+
+  // Apply special class to final line
+  finalLine.classList.remove("b");
+  finalLine.classList.add("final-line");
+
+  // Select all line number divs
+  const lineNumbers = document.querySelectorAll("div.line-number");
+
+  // Final line should never be numbered, so we stop iteration early
+  for (let i = 0; i < lineNumbers.length - 1; i++) {
+    // The actual line number, 1-indexed
+    const count = i + 1;
+
+    // If divisible by three, insert number
+    if (count % 3 === 0) {
+      // Number is also localized for Persian
+      lineNumbers[i].innerHTML = `<p>${count.toLocaleString("fa-IR")}</p>`;
+    }
+  }
+</script>
