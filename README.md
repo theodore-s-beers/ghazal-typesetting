@@ -12,6 +12,6 @@ Additional notes:
 
 - Ideally, justification would be done with _kashīdah_, rather than with spaces. But I'm not sure there's any straightforward way of doing that in the browser.
 
-- Setting the hemistich width is tricky. I tried to make them just wide enough to accommodate a long meter. For a short meter, narrower columns would look better, since not as much space would need to be added in justification. It's a balancing act.
+- Setting the hemistich width is tricky. I found a rough way of using JavaScript to calculate the width required for the longest hemistich in a given poem, and then to update the CSS accordingly. It seems to work, but I'll keep testing it. The idea is that we want to make our hemistich blocks only as wide as necessary, so that there won't be too much empty space after justification.
 
 - I've included an example output file, `hafez-407.html`. Apart from the filename, I haven't made any changes to what the script returned for the poem in question.
