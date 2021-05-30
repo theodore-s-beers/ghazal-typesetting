@@ -5,15 +5,19 @@
 />
 
 <style>
+  :root {
+    --hemistich-width: auto;
+  }
+
   body {
     margin: auto;
-    max-width: 86ch;
+    max-width: calc((var(--hemistich-width) * 2) + 10ch);
     padding: 2ch 1ch;
   }
 
   p {
     font-family: "Scheherazade", serif;
-    font-size: 150%;
+    font-size: x-large;
     margin: 0;
     text-align-last: justify;
   }
@@ -27,20 +31,21 @@
     align-items: center;
     display: flex;
     flex-flow: column nowrap;
+    margin-right: 5.5ch;
     margin-top: 0.4rem;
   }
 
   .line-number {
-    width: 6%;
+    width: 5.5ch;
   }
 
   .m1,
   .m2 {
-    width: 44.5%;
+    width: var(--hemistich-width);
   }
 
   .separator {
-    width: 5%;
+    width: 4.5ch;
   }
 
   #title-block-header {
@@ -49,32 +54,31 @@
 
   @media screen and (max-width: 767px) {
     p {
-      font-size: 140%;
       text-align-last: auto;
     }
 
-    .b {
+    .b,
+    .final-line {
       display: block;
     }
 
     .final-line {
-      display: block;
-      margin-top: 0;
+      margin: 0;
     }
 
     .line-number {
       display: none;
     }
 
-    .m1 {
+    .m1,
+    .m2 {
       width: auto;
     }
 
     .m2 {
       background-color: #e8e8e8;
       border-radius: 4px;
-      padding-right: 1em;
-      width: auto;
+      padding-right: 2ch;
     }
 
     .separator {
