@@ -7,7 +7,7 @@
   const firstHems = document.querySelectorAll("div.m1");
 
   for (let i = 0; i < firstHems.length; i++) {
-    // Add a dive for line number before each first hemistich
+    // Add a div for line number before each first hemistich
     firstHems[i].insertAdjacentHTML(
       "beforebegin",
       '<div class="line-number"></div>'
@@ -58,7 +58,7 @@
   //
 
   // I picked up this function from SO. It's supposed to use a canvas to
-  // calculate the width of some text. We provide a string of text, and the
+  // calculate the width of some text. We provide a string of text and the
   // desired font properties.
   function getTextWidth(text, font) {
     const canvas =
@@ -70,7 +70,7 @@
     return metrics.width;
   }
 
-  // Select all p tags. This is the easiest way of getting all hemistichs.
+  // Select all p tags. This is an easy way of getting all hemistichs.
   const allHems = document.querySelectorAll("p");
 
   // Set up variable to hold max computed text width
@@ -89,9 +89,9 @@
 
   // Make sure we got an actual max width before doing anything else
   if (maxWidth !== 0) {
-    // For some reason, I'm getting computed widths that are somewhat longer
-    // than what I want for layout. So we can adjust it downward. We also need
-    // to turn it into a string with a pixel value for CSS.
+    // For some reason, the computed widths are longer than what we want for
+    // layout; so we scale down. We also need to turn this into a string with a
+    // pixel value for CSS.
     const adjustedWidth = Math.floor(maxWidth * 0.8) + "px";
 
     // Finally, update CSS custom property
