@@ -1,5 +1,7 @@
 # Make a _ghazal_ look ok on the web
 
+_NB: My more recent project, [ganjoor-pretty](https://github.com/theodore-s-beers/ganjoor-pretty), will supersede this script for most users._
+
 There's a certain way that a classical Persian poem—or a _ghazal_, at least—should be typeset. The main text goes in two justified columns, so that the hemistichs of each line are side by side. There should be a separator between the columns. And it's nice if line numbers are added (every three to five should be about right). The final line is centered, with its hemistichs stacked vertically.
 
 That isn't too much to ask, is it? But it's rare to find this done correctly on the web. I've put together a bit of CSS that meets the basic requirements. (It's a work in progress…) A decent font should also be used; I tend to go with [Scheherazade](https://fonts.google.com/specimen/Scheherazade).
